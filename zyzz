@@ -9,6 +9,9 @@ COPY ./index.php ./
 EXPOSE 3000
 CMD ["php","-S","0.0.0.0:3000"]
 
+rs>docker build . -t rs/php
+rs>docker run --name=php-server -p=3000:3000 rs/php
+
 
 
 
