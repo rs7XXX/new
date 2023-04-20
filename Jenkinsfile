@@ -1,26 +1,19 @@
-pipeline{
-  agent any
+pipeline {
+    agent any
     stages{
-      stage('one'){
-       steps{
-             bat 'python -v'
+
+        stage('REPO Cloning'){
+            steps {
+                bat 'xcopy /S "*" "D:/xampp/htdocs/my world" /Y'
+            }
         }
-       }
-      stage('two'){
-       steps{
-             bat 'xcopy /s "" "D:\xampp\htdocs\Jenkins" Y'
+
+        stage('Print done'){
+            steps{
+                echo 'Done!'
+            }
         }
-       }
-      stage('three'){
-       steps{
-             echo 'done'
-        }
-       }
-      stage('four'){
-       steps{
-             echo 'done'
-        }
-       }
     }
 }
+
 
