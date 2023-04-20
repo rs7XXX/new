@@ -1,0 +1,23 @@
+<html>
+   <?php echo "hello from computer" ?>
+</html>
+
+
+
+FROM php
+COPY ./index.php ./
+EXPOSE 3000
+CMD ["php","-S","0.0.0.0:3000"]
+
+
+
+
+docker run --name ubuntucontainer -it ubuntu
+ls
+cd tmp
+ls
+exit
+docker images
+docker commit ubuntucontainer ubuntuupdate
+docker tag paste_image_id_of_ubuntu  paste_dockerweb_repository_name
+docker push paste_dockerweb_repository_name:latest
