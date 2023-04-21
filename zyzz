@@ -48,3 +48,30 @@ time.sleep(4)
 
 driver.close()
 print("sample test case successfully completed")
+
+
+
+
+
+
+
+
+
+
+git clone your_repo
+mkdir project
+cd project
+git config --global user.name ""
+git config --global user.email ""
+git init 
+git status
+git add "bot.txt"
+git status
+git commit -m "New commit"
+git status
+git remote add vans "github_reo_url"
+git show
+git push -u vans master
+git status
+git tag v2.0
+git tag -a v3.0 -m " new release for v3.o"
